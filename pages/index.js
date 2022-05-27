@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import { AnalyticsBrowser } from '@segment/analytics-next'
+
+export const analytics = AnalyticsBrowser.load({ writeKey: 'lYF8vLO5HukBMEcynl1YPewdLWZR1Gbx' });
 
 export default function Home() {
   return (
@@ -12,6 +15,10 @@ export default function Home() {
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <div>
+          <button onClick={() => analytics.track('hello world')}>Track</button>
+        </div>
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
