@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { AnalyticsBrowser } from '@segment/analytics-next'
 
-export const analytics = AnalyticsBrowser.load({ writeKey: 'lYF8vLO5HukBMEcynl1YPewdLWZR1Gbx' });
+export const analytics = AnalyticsBrowser.load({ cdnURL: 'https://segment-analytics.courier-tk.com', writeKey: 'lYF8vLO5HukBMEcynl1YPewdLWZR1Gbx' });
 
 export default function Home() {
   return (
